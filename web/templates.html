@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Выбор шаблона</title>
+</head>
+<body>
+
+<h1>Пожалуйста, выберите необходимый вам шаблон:</h1>
+<br>
+<ul>
+{{range .Templates}}
+    <li><a href="/params?template={{.TemplateName}}">{{.Title}}</a></li>
+{{end}}
+</ul>
+
+</body>
+</html>

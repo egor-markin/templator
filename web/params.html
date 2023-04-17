@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ввод значения параметров для шаблона "{{.TemplateTitle}}"</title>
+</head>
+<body>
+
+<h1>Введите значения параметров для шаблона "{{.TemplateTitle}}"</h1>
+<br>
+<form action="/generate" method="post">
+    {{range .Params}}
+    <label>
+        {{.}}
+        <input name="{{.}}">
+    </label>
+    <br><br>
+    {{end}}
+    <input type="hidden" name="template" value="{{.TemplateName}}">
+    <input type="submit">
+</form>
+
+</body>
+</html>
